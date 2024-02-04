@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// App.jsx
 
-function App() {
+import React from "react";
+import AlertMessage from "./components/message/index";
+
+const App = () => {
+  // Xəbərdarlıq mesajları üçün array yaradiriq
+  const alertMessages = [
+    { message: "Uğurla tamamlandı!", type: "success" },
+    { message: "Xəta baş verdi!", type: "error" },
+    { message: "Əlavə məlumat!", type: "info" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Xəbərdarlıq Mesajları</h1>
+
+      {alertMessages.map((element) => (
+        <AlertMessage message={element.message} type={element.type} />
+      ))}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,23 @@
+/* AlertMessage.css */
+
+* {
+  padding: 10px 100px;
+  margin: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.error {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.info {
+  background-color: #2196f3;
+  color: #fff;
+}
